@@ -42,8 +42,8 @@ while page < 3:
         
         if len(review_tree.cssselect('div#main div.info h1')) == 0: continue
         
-        artist = review_tree.cssselect('div#main div.info h1')[0].text_content()
-        album = review_tree.cssselect('div#main div.info h2')[0].text_content()
+        artist = review_tree.cssselect('div#review-detail div.info h2')[0].text_content()
+        album = review_tree.cssselect('div#review-detail div.info h1')[0].text_content()
         reviewer = review_tree.cssselect('div#main div.info h4 address')[0].text_content()
         score = review_tree.cssselect('div#main div.info span.score')[0].text_content()
         
